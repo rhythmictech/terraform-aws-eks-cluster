@@ -40,3 +40,7 @@ output "worker_iam_role_arn" {
 output "worker_iam_role_name" {
   value = module.eks.worker_iam_role_name
 }
+output "worker_security_group_id" {
+  description = "Security group ID attached to the EKS workers."
+  value       = module.eks.worker_security_group_id
+}
