@@ -13,6 +13,11 @@ output "cluster_endpoint" {
   value       = module.eks.cluster_endpoint
 }
 
+output "cluster_iam_role_arn" {
+  description = "IAM role name for the cluster"
+  value       = module.eks.cluster_iam_role_arn
+}
+
 output "cluster_id" {
   description = "EKS Cluster ID"
   value       = module.eks.cluster_id
@@ -34,11 +39,13 @@ output "cluster_version" {
 }
 
 output "worker_iam_role_arn" {
-  value = module.eks.worker_iam_role_arn
+  description = "IAM role attached to workers"
+  value       = module.eks.worker_iam_role_arn
 }
 
 output "worker_iam_role_name" {
-  value = module.eks.worker_iam_role_name
+  description = "IAM role attached to workers"
+  value       = module.eks.worker_iam_role_name
 }
 output "worker_security_group_id" {
   description = "Security group ID attached to the EKS workers."

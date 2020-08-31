@@ -1,4 +1,12 @@
 # Sabotaging the local provider because it can't actually talk to the right cluster on provisioning operations
+terraform {
+  required_version = "~> 0.12.19"
+
+  required_providers {
+    kubernetes = "~> 1.12.0"
+  }
+}
+
 provider "kubernetes" {
   host             = "http://localhost:9999"
   load_config_file = false
@@ -68,5 +76,5 @@ resource "aws_cloudwatch_metric_alarm" "invalid_bearer_token" {
   namespace           = "eks"
   period              = 60
   statistic           = "Sum"
-  threshold           = 5
+  threshold           = var.invalid_bearer_token_threshold
 }
