@@ -14,7 +14,7 @@ Create and manage an EKS cluster. This module is primarily a wrapper around the 
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.19 |
+| terraform | >= 0.12.19 |
 | kubernetes | ~> 1.12.0 |
 
 ## Providers
@@ -44,8 +44,8 @@ Create and manage an EKS cluster. This module is primarily a wrapper around the 
 | map\_users | Additional IAM users to add to the aws-auth configmap. | `list(any)` | `[]` | no |
 | tags | Tags to apply to supported resources | `map(string)` | `{}` | no |
 | worker\_groups | A list of maps defining worker group configurations to be defined using AWS Launch Configurations. See workers\_group\_defaults for valid keys. | `list(any)` | `[]` | no |
-| worker\_groups\_launch\_template | A list of maps defining worker group configurations to be defined using AWS Launch Template. See workers\_group\_defaults for valid keys. | `list(any)` | `[]` | no |
-| workers\_group\_defaults | Override default values for target groups. See `workers_group_defaults_defaults` in local.tf for valid keys. | `map(any)` | `{}` | no |
+| worker\_groups\_launch\_template | A list of maps defining worker group configurations to be defined using AWS Launch Template. See workers\_group\_defaults for valid keys. | `list` | `[]` | no |
+| workers\_group\_defaults | Override default values for target groups. See `workers_group_defaults_defaults` in local.tf for valid keys. | `map` | `{}` | no |
 
 ## Outputs
 

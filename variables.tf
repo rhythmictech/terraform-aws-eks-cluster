@@ -98,14 +98,16 @@ variable "worker_groups" {
   type        = list(any)
 }
 
+# Typing this causes Terraform to crash https://github.com/hashicorp/terraform/issues/21588
+# tflint-ignore: terraform_typed_variables
 variable "worker_groups_launch_template" {
   default     = []
   description = "A list of maps defining worker group configurations to be defined using AWS Launch Template. See workers_group_defaults for valid keys."
-  type        = list(any)
 }
 
+# Typing this causes Terraform to crash https://github.com/hashicorp/terraform/issues/21588
+# tflint-ignore: terraform_typed_variables
 variable "workers_group_defaults" {
   default     = {}
   description = "Override default values for target groups. See `workers_group_defaults_defaults` in local.tf for valid keys."
-  type        = map(any)
 }
