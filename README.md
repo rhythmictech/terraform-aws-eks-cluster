@@ -14,7 +14,7 @@ Create and manage an EKS cluster. This module is primarily a wrapper around the 
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.19 |
+| terraform | >= 0.12.19 |
 | kubernetes | ~> 1.12.0 |
 
 ## Providers

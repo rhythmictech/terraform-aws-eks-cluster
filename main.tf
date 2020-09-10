@@ -1,6 +1,6 @@
 # Sabotaging the local provider because it can't actually talk to the right cluster on provisioning operations
 terraform {
-  required_version = "~> 0.12.19"
+  required_version = ">= 0.12.19"
 
   required_providers {
     kubernetes = "~> 1.12.0"
