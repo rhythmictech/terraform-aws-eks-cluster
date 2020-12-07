@@ -45,6 +45,7 @@ Create and manage an EKS cluster. This module is primarily a wrapper around the 
 | tags | Tags to apply to supported resources | `map(string)` | `{}` | no |
 | worker\_groups | A list of maps defining worker group configurations to be defined using AWS Launch Configurations. See workers\_group\_defaults for valid keys. | `list(any)` | `[]` | no |
 | worker\_groups\_launch\_template | A list of maps defining worker group configurations to be defined using AWS Launch Template. See workers\_group\_defaults for valid keys. | `list` | `[]` | no |
+| workers\_additional\_policies | Additional IAM policies to attach (use ARNs) | `list(string)` | `[]` | no |
 | workers\_group\_defaults | Override default values for target groups. See `workers_group_defaults_defaults` in local.tf for valid keys. | `map` | `{}` | no |
 
 ## Outputs
