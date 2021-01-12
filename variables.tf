@@ -92,6 +92,12 @@ variable "vpc_id" {
   type        = string
 }
 
+variable "workers_additional_policies" {
+  default     = []
+  description = "Additional IAM policies to attach (use ARNs)"
+  type        = list(string)
+}
+
 variable "worker_groups" {
   default     = []
   description = "A list of maps defining worker group configurations to be defined using AWS Launch Configurations. See workers_group_defaults for valid keys."

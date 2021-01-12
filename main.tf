@@ -27,6 +27,7 @@ module "eks" {
   subnets                          = var.subnets
   vpc_id                           = var.vpc_id
   worker_groups                    = var.worker_groups
+  workers_additional_policies      = var.workers_additional_policies
   worker_groups_launch_template    = var.worker_groups_launch_template
   workers_group_defaults = merge(
     {
