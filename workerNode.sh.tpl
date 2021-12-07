@@ -41,7 +41,7 @@ EOF
 systemctl restart systemd-sysctl.service
 
 # Restrict metadata services access (and thus IAM credential access) for pods
-{% if not var.enable_imds %}
+{% if var.disable_imds %}
 yum install -y iptables-services
 iptables --insert FORWARD 1 --in-interface eni+ --destination 169.254.169.254/32 --jump DROP
 iptables-save | tee /etc/sysconfig/iptables

@@ -45,9 +45,9 @@ variable "create_metric_filters" {
   type        = bool
 }
 
-variable "enable_imds" {
+variable "disable_imds" {
   default     = false
-  description = "Enable IMDS for pods, see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html"
+  description = "Disable IMDS (EC2 metadata url) for pods, see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html"
   type        = bool
 }
 
