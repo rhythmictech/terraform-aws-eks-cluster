@@ -72,6 +72,7 @@ Create and manage an EKS cluster. This module is primarily a wrapper around the 
 | <a name="output_cluster_endpoint"></a> [cluster\_endpoint](#output\_cluster\_endpoint) | Kubernetes API Endpoint URL |
 | <a name="output_cluster_iam_role_arn"></a> [cluster\_iam\_role\_arn](#output\_cluster\_iam\_role\_arn) | IAM role name for the cluster |
 | <a name="output_cluster_id"></a> [cluster\_id](#output\_cluster\_id) | EKS Cluster ID |
+| <a name="output_cluster_issuer_arn"></a> [cluster\_issuer\_arn](#output\_cluster\_issuer\_arn) | OIDC Issuer ARN (returns empty string unless IRSA is enabled) |
 | <a name="output_cluster_issuer_url"></a> [cluster\_issuer\_url](#output\_cluster\_issuer\_url) | OIDC Issuer URL (returns empty string unless IRSA is enabled) |
 | <a name="output_cluster_security_group_id"></a> [cluster\_security\_group\_id](#output\_cluster\_security\_group\_id) | Security group protecting the cluster endpoint |
 | <a name="output_cluster_version"></a> [cluster\_version](#output\_cluster\_version) | Kubernetes cluster version |
