@@ -28,6 +28,11 @@ output "cluster_issuer_url" {
   value       = var.enable_irsa ? module.eks.cluster_oidc_issuer_url : ""
 }
 
+output "cluster_issuer_arn" {
+  description = "OIDC Issuer ARN (returns empty string unless IRSA is enabled)"
+  value       = var.enable_irsa ? module.eks.oidc_provider_arn : ""
+}
+
 output "cluster_security_group_id" {
   description = "Security group protecting the cluster endpoint"
   value       = module.eks.cluster_security_group_id
