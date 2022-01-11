@@ -45,6 +45,12 @@ variable "create_metric_filters" {
   type        = bool
 }
 
+variable "disable_imds" {
+  default     = false
+  description = "Disable IMDS (EC2 metadata url) for pods, see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html"
+  type        = bool
+}
+
 variable "enable_irsa" {
   default     = true
   description = "Enable IRSA (EKS IAM security OIDC provider)"

@@ -32,7 +32,7 @@ module "eks" {
   workers_group_defaults = merge(
     {
       "kubelet_extra_args" = "--kube-reserved cpu=250m,memory=1Gi,ephemeral-storage=1Gi --system-reserved cpu=250m,memory=0.2Gi,ephemeral-storage=1Gi"
-      "pre_userdata"       = templatefile("${path.module}/workerNode.sh.tpl", {})
+      "pre_userdata"       = templatefile("${path.module}/workerNode.sh.tpl", { disable_imds = var.disable_imds })
     },
     var.workers_group_defaults
   )
