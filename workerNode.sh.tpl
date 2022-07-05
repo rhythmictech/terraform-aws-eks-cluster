@@ -47,5 +47,3 @@ iptables --insert FORWARD 1 --in-interface eni+ --destination 169.254.169.254/32
 iptables-save | tee /etc/sysconfig/iptables
 systemctl enable --now iptables
 %{ endif ~}
-
-
