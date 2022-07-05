@@ -3,10 +3,6 @@ terraform {
   required_version = ">= 0.12.19"
 }
 
-provider "kubernetes" {
-  host             = "http://localhost:9999"
-}
-
 module "eks" {
   source                           = "git::https://github.com/terraform-aws-modules/terraform-aws-eks.git?ref=v8.0.0"
   attach_worker_autoscaling_policy = var.attach_worker_autoscaling_policy
