@@ -4,7 +4,7 @@ terraform {
 }
 
 module "eks" {
-  source                           = "git::https://github.com/terraform-aws-modules/terraform-aws-eks.git?ref=v8.0.0"
+  source                           = "git::https://github.com/sblack4/terraform-aws-eks-v12.1.0-no-windows.git?ref=v8.0.0-no-windows"
   attach_worker_autoscaling_policy = var.attach_worker_autoscaling_policy
   cluster_enabled_log_types        = var.cluster_enabled_log_types
   cluster_endpoint_private_access  = var.cluster_endpoint_private_access
